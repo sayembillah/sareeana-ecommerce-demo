@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/src/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Sareeana</title>
+  </head>
+  <body class="bg-rose-50 font-sans min-h-screen">
+    <!-- Navbar Start -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-md">
+      <div class="container mx-auto flex items-center justify-between py-4 px-4">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <span class="text-2xl font-extrabold text-rose-600 tracking-wide">Sareeana</span>
+        </div>
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex space-x-8 mx-auto text-rose-700 font-medium">
+          <li><a href="index.html" class="hover:text-rose-500 transition-colors">Home</a></li>
+          <li><a href="shop.html" class="hover:text-rose-500 transition-colors">Shop</a></li>
+          <li><a href="categories.html" class="hover:text-rose-500 transition-colors">Categories</a></li>
+          <li><a href="about.html" class="hover:text-rose-500 transition-colors">About</a></li>
+          <li><a href="faq.html" class="hover:text-rose-500 transition-colors">FAQ</a></li>
+          <li><a href="login.html" class="hover:text-rose-500 transition-colors">Login</a></li>
+          <li><a href="signup.html" class="hover:text-rose-500 transition-colors">Sign Up</a></li>
+        </ul>
+        <!-- Cart Icon and User Dropdown -->
+        <div class="flex items-center gap-4">
+          <button class="relative group" onclick="location.href='cart.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-rose-600 group-hover:text-rose-400 transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.836l.383 1.437m0 0l1.7 6.385a2.25 2.25 0 002.183 1.692h7.063a2.25 2.25 0 002.183-1.692l1.7-6.385m-13.216 0h13.216" />
+              <circle cx="9" cy="20" r="1.25" />
+              <circle cx="17" cy="20" r="1.25" />
+            </svg>
+            <span class="absolute -top-2 -right-2 bg-rose-500 text-white text-xs rounded-full px-1.5 py-0.5">0</span>
+          </button>
+          <!-- User Dropdown -->
+          <div class="relative group">
+            <button id="userMenuBtn" class="flex items-center justify-center w-10 h-10 rounded-full bg-rose-100 hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-rose-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 19.5a8.25 8.25 0 1115 0v.75a.75.75 0 01-.75.75h-13.5a.75.75 0 01-.75-.75v-.75z" />
+              </svg>
+            </button>
+            <div id="userDropdown" class="hidden group-hover:block absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg py-2 z-50 border border-rose-100">
+              <a href="profile.html" class="block px-5 py-2 text-rose-700 hover:bg-rose-50">Profile</a>
+              <a href="#" class="block px-5 py-2 text-rose-700 hover:bg-rose-50">Settings</a>
+              <a href="order-history.html" class="block px-5 py-2 text-rose-700 hover:bg-rose-50">Order History</a>
+              <a href="#" class="block px-5 py-2 text-rose-500 hover:bg-rose-50 border-t border-rose-100">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <main class="flex-1">
+      <!-- Brand Story / Mission -->
+      <section class="container mx-auto px-4 py-16">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-serif font-bold text-rose-800 mb-4" style="font-family: 'Playfair Display', serif;">Our Story</h1>
+          <p class="text-lg text-rose-700 mb-6">Sareeana was born from a passion for timeless tradition and modern femininity. Our mission is to empower women to embrace their heritage with grace, confidence, and style—one saree at a time.</p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-8 items-center justify-center mb-12">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Saree Design" class="rounded-xl shadow-lg w-full md:w-1/2 object-cover h-72" />
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Traditional Saree" class="rounded-xl shadow-lg w-full md:w-1/2 object-cover h-72" />
+        </div>
+      </section>
+      <!-- Team / Founder Info -->
+      <section class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-serif font-bold text-rose-800 mb-8 text-center" style="font-family: 'Playfair Display', serif;">Meet Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Founder" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-rose-100" />
+            <h3 class="font-serif text-xl font-bold text-rose-700 mb-1">Ananya Sharma</h3>
+            <span class="text-rose-500 mb-2">Founder & Creative Director</span>
+            <p class="text-rose-600 text-center">With a love for Indian textiles and a vision for modern elegance, Ananya leads Sareeana with heart and creativity.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Co-Founder" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-rose-100" />
+            <h3 class="font-serif text-xl font-bold text-rose-700 mb-1">Priya Verma</h3>
+            <span class="text-rose-500 mb-2">Head of Design</span>
+            <p class="text-rose-600 text-center">Priya brings a fresh perspective to traditional saree design, blending heritage with contemporary trends.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Operations" class="w-24 h-24 rounded-full object-cover mb-4 border-4 border-rose-100" />
+            <h3 class="font-serif text-xl font-bold text-rose-700 mb-1">Meera Joshi</h3>
+            <span class="text-rose-500 mb-2">Operations Manager</span>
+            <p class="text-rose-600 text-center">Meera ensures every order is handled with care and every customer feels valued at Sareeana.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Timeline / Milestones -->
+      <section class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-serif font-bold text-rose-800 mb-8 text-center" style="font-family: 'Playfair Display', serif;">Our Journey</h2>
+        <ol class="relative border-l-4 border-rose-100 max-w-2xl mx-auto">
+          <li class="mb-10 ml-6">
+            <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-rose-200 rounded-full ring-8 ring-rose-50"><span class="text-rose-600 font-bold">2018</span></span>
+            <h4 class="font-serif text-lg font-bold text-rose-700">Founded Sareeana</h4>
+            <p class="text-rose-600">Ananya and Priya launch their dream to bring curated sarees to women everywhere.</p>
+          </li>
+          <li class="mb-10 ml-6">
+            <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-rose-200 rounded-full ring-8 ring-rose-50"><span class="text-rose-600 font-bold">2020</span></span>
+            <h4 class="font-serif text-lg font-bold text-rose-700">First 1,000 Customers</h4>
+            <p class="text-rose-600">Celebrated a milestone of 1,000 happy saree lovers across India.</p>
+          </li>
+          <li class="mb-10 ml-6">
+            <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-rose-200 rounded-full ring-8 ring-rose-50"><span class="text-rose-600 font-bold">2023</span></span>
+            <h4 class="font-serif text-lg font-bold text-rose-700">Global Reach</h4>
+            <p class="text-rose-600">Expanded shipping to 10+ countries, sharing Indian elegance worldwide.</p>
+          </li>
+          <li class="ml-6">
+            <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-rose-200 rounded-full ring-8 ring-rose-50"><span class="text-rose-600 font-bold">2025</span></span>
+            <h4 class="font-serif text-lg font-bold text-rose-700">Sustainable Collection</h4>
+            <p class="text-rose-600">Launched our first eco-friendly saree line, blending tradition with responsibility.</p>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <!-- Footer Start -->
+    <footer class="bg-white border-t border-rose-100 mt-10">
+      <div class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-rose-600">
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Shop</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Categories</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Contact</h4>
+          <p class="text-rose-600">Email: support@Sareeana.com</p>
+          <p class="text-rose-600">Phone: +91 98765 43210</p>
+        </div>
+        <!-- Social Media -->
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Follow Us</h4>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Instagram</span>📸</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Facebook</span>📘</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Twitter</span>🐦</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-rose-400 py-4 text-sm">© 2025 Sareeana. All rights reserved.</div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+      // Show/hide dropdown on click for accessibility (optional, fallback for mobile)
+      document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('userMenuBtn');
+        const dropdown = document.getElementById('userDropdown');
+        if (btn && dropdown) {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdown.classList.toggle('hidden');
+          });
+          document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target) && !btn.contains(e.target)) {
+              dropdown.classList.add('hidden');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

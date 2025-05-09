@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/src/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist | Sareeana</title>
+  </head>
+  <body class="bg-rose-50 font-sans min-h-screen">
+    <!-- Navbar Start (copied from index.html) -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-md">
+      <div class="container mx-auto flex items-center justify-between py-4 px-4">
+        <div class="flex items-center">
+          <span class="text-2xl font-extrabold text-rose-600 tracking-wide">Sareeana</span>
+        </div>
+        <ul class="hidden md:flex space-x-8 mx-auto text-rose-700 font-medium">
+          <li><a href="index.html" class="hover:text-rose-500 transition-colors">Home</a></li>
+          <li><a href="shop.html" class="hover:text-rose-500 transition-colors">Shop</a></li>
+          <li><a href="#" class="hover:text-rose-500 transition-colors">Categories</a></li>
+          <li><a href="about.html" class="hover:text-rose-500 transition-colors">About</a></li>
+          <li><a href="login.html" class="hover:text-rose-500 transition-colors">Login</a></li>
+          <li><a href="signup.html" class="hover:text-rose-500 transition-colors">Sign Up</a></li>
+        </ul>
+        <div class="flex items-center">
+          <button class="relative group" onclick="location.href='cart.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-rose-600 group-hover:text-rose-400 transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.836l.383 1.437m0 0l1.7 6.385a2.25 2.25 0 002.183 1.692h7.063a2.25 2.25 0 002.183-1.692l1.7-6.385m-13.216 0h13.216" />
+              <circle cx="9" cy="20" r="1.25" />
+              <circle cx="17" cy="20" r="1.25" />
+            </svg>
+            <span class="absolute -top-2 -right-2 bg-rose-500 text-white text-xs rounded-full px-1.5 py-0.5">0</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <main class="container mx-auto px-4 py-12">
+      <h1 class="text-2xl md:text-3xl font-bold text-rose-800 mb-8 text-center" style="font-family: 'Playfair Display', serif;">My Wishlist</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Wishlist Item 1 -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative group">
+          <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Remove from Wishlist" onclick="this.closest('.group').remove()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+              <path d="M6 18L18 6M6 6l12 12" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Rose Silk Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+          <div class="flex items-center justify-between w-full mb-2">
+            <h4 class="font-semibold text-rose-700">Rose Silk Saree</h4>
+            <span class="text-rose-400">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 inline">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </span>
+          </div>
+          <p class="text-rose-500 text-sm mb-2">Soft silk with floral motifs, perfect for festive occasions.</p>
+          <span class="text-rose-600 font-bold mb-3">₹2,499</span>
+          <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='cart.html'">Move to Cart</button>
+        </div>
+        <!-- Wishlist Item 2 -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative group">
+          <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Remove from Wishlist" onclick="this.closest('.group').remove()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+              <path d="M6 18L18 6M6 6l12 12" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Pastel Cotton Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+          <div class="flex items-center justify-between w-full mb-2">
+            <h4 class="font-semibold text-rose-700">Pastel Cotton Saree</h4>
+            <span class="text-rose-400">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 inline">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </span>
+          </div>
+          <p class="text-rose-500 text-sm mb-2">Lightweight, breathable, and ideal for summer days.</p>
+          <span class="text-rose-600 font-bold mb-3">₹1,799</span>
+          <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='cart.html'">Move to Cart</button>
+        </div>
+        <!-- Wishlist Item 3 -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative group">
+          <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Remove from Wishlist" onclick="this.closest('.group').remove()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+              <path d="M6 18L18 6M6 6l12 12" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Elegant Chiffon Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+          <div class="flex items-center justify-between w-full mb-2">
+            <h4 class="font-semibold text-rose-700">Elegant Chiffon Saree</h4>
+            <span class="text-rose-400">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 inline">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </span>
+          </div>
+          <p class="text-rose-500 text-sm mb-2">Sheer, flowy chiffon for a graceful, modern look.</p>
+          <span class="text-rose-600 font-bold mb-3">₹2,199</span>
+          <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='cart.html'">Move to Cart</button>
+        </div>
+      </div>
+    </main>
+    <!-- Footer Start (copied from index.html) -->
+    <footer class="bg-white border-t border-rose-100 mt-10">
+      <div class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-rose-600">
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Shop</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Categories</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Contact</h4>
+          <p class="text-rose-600">Email: support@Sareeana.com</p>
+          <p class="text-rose-600">Phone: +91 98765 43210</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Follow Us</h4>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Instagram</span>📸</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Facebook</span>📘</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Twitter</span>🐦</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-rose-400 py-4 text-sm">© 2025 Sareeana. All rights reserved.</div>
+    </footer>
+    <!-- Footer End -->
+  </body>
+</html>

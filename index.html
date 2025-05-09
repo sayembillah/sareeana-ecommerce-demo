@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/src/style.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="bg-rose-50 font-sans min-h-screen">
+    <!-- Navbar Start -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-md">
+      <div class="container mx-auto flex items-center justify-between py-4 px-4">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <span class="text-2xl font-extrabold text-rose-600 tracking-wide">Sareeana</span>
+        </div>
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex space-x-8 mx-auto text-rose-700 font-medium">
+          <li><a href="index.html" class="hover:text-rose-500 transition-colors">Home</a></li>
+          <li><a href="shop.html" class="hover:text-rose-500 transition-colors">Shop</a></li>
+          <li><a href="categories.html" class="hover:text-rose-500 transition-colors">Categories</a></li>
+          <li><a href="about.html" class="hover:text-rose-500 transition-colors">About</a></li>
+          <li><a href="faq.html" class="hover:text-rose-500 transition-colors">FAQ</a></li>
+          <li><a href="login.html" class="hover:text-rose-500 transition-colors">Login</a></li>
+          <li><a href="signup.html" class="hover:text-rose-500 transition-colors">Sign Up</a></li>
+        </ul>
+        <!-- Cart Icon and User Dropdown -->
+        <div class="flex items-center gap-4">
+          <button class="relative group" onclick="location.href='cart.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-rose-600 group-hover:text-rose-400 transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.836l.383 1.437m0 0l1.7 6.385a2.25 2.25 0 002.183 1.692h7.063a2.25 2.25 0 002.183-1.692l1.7-6.385m-13.216 0h13.216" />
+              <circle cx="9" cy="20" r="1.25" />
+              <circle cx="17" cy="20" r="1.25" />
+            </svg>
+            <span class="absolute -top-2 -right-2 bg-rose-500 text-white text-xs rounded-full px-1.5 py-0.5">0</span>
+          </button>
+          <!-- User Dropdown -->
+          <div class="relative group">
+            <button id="userMenuBtn" class="flex items-center justify-center w-10 h-10 rounded-full bg-rose-100 hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-rose-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 19.5a8.25 8.25 0 1115 0v.75a.75.75 0 01-.75.75h-13.5a.75.75 0 01-.75-.75v-.75z" />
+              </svg>
+            </button>
+            <div id="userDropdown" class="hidden group-hover:block absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg py-2 z-50 border border-rose-100">
+              <a href="profile.html" class="block px-5 py-2 text-rose-700 hover:bg-rose-50">Profile</a>
+              <a href="#" class="block px-5 py-2 text-rose-700 hover:bg-rose-50">Settings</a>
+              <a href="order-history.html" class="block px-5 py-2 text-rose-700 hover:bg-rose-50">Order History</a>
+              <a href="#" class="block px-5 py-2 text-rose-500 hover:bg-rose-50 border-t border-rose-100">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Hero Section Start -->
+    <section class="relative w-full min-h-[60vh] flex items-center justify-center bg-rose-100">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80" alt="Saree Hero" class="absolute inset-0 w-full h-full object-cover object-center opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-r from-rose-200/80 via-white/60 to-rose-100/80"></div>
+      <div class="relative z-10 max-w-2xl mx-auto text-center py-20 px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-rose-700 mb-4 drop-shadow-lg" style="font-family: 'Playfair Display', serif;">Graceful Sarees for Every Occasion</h1>
+        <p class="text-lg md:text-xl text-rose-800 mb-8">Discover timeless elegance and modern styles in our exclusive women's saree collection.</p>
+        <a href="#" class="inline-block bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-3 rounded-lg shadow transition-colors">Shop Now</a>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- Promotional Banner Start -->
+    <div class="container mx-auto px-4 mt-10">
+      <div class="bg-gradient-to-r from-rose-200 via-rose-100 to-pink-100 rounded-xl shadow flex flex-col md:flex-row items-center justify-between py-6 px-8 text-center md:text-left">
+        <span class="text-xl md:text-2xl font-bold text-rose-700">✨ Flat 20% Off on New Arrivals! ✨</span>
+        <a href="#" class="mt-4 md:mt-0 inline-block bg-rose-500 hover:bg-rose-600 text-white font-medium px-6 py-2 rounded-lg transition-colors">Explore Collection</a>
+      </div>
+    </div>
+    <!-- Promotional Banner End -->
+    <!-- Featured Collection Start -->
+    <section class="container mx-auto px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-rose-800 mb-8 text-center" style="font-family: 'Playfair Display', serif;">Featured Collection</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Saree 1" class="w-full h-48 object-cover rounded-lg mb-4" />
+          <h4 class="font-semibold text-lg text-rose-700 mb-2">Rose Silk Saree</h4>
+          <p class="text-rose-500 font-bold text-base mb-4">₹2,499</p>
+          <button class="bg-rose-500 hover:bg-rose-600 text-white font-medium px-5 py-2 rounded-lg transition-colors">View</button>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Saree 2" class="w-full h-48 object-cover rounded-lg mb-4" />
+          <h4 class="font-semibold text-lg text-rose-700 mb-2">Pastel Cotton Saree</h4>
+          <p class="text-rose-500 font-bold text-base mb-4">₹1,799</p>
+          <button class="bg-rose-500 hover:bg-rose-600 text-white font-medium px-5 py-2 rounded-lg transition-colors">View</button>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Saree 3" class="w-full h-48 object-cover rounded-lg mb-4" />
+          <h4 class="font-semibold text-lg text-rose-700 mb-2">Elegant Chiffon Saree</h4>
+          <p class="text-rose-500 font-bold text-base mb-4">₹2,199</p>
+          <button class="bg-rose-500 hover:bg-rose-600 text-white font-medium px-5 py-2 rounded-lg transition-colors">View</button>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col items-center">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Saree 4" class="w-full h-48 object-cover rounded-lg mb-4" />
+          <h4 class="font-semibold text-lg text-rose-700 mb-2">Classic Banarasi Saree</h4>
+          <p class="text-rose-500 font-bold text-base mb-4">₹3,499</p>
+          <button class="bg-rose-500 hover:bg-rose-600 text-white font-medium px-5 py-2 rounded-lg transition-colors">View</button>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Collection End -->
+    <!-- Testimonials Start -->
+    <section class="container mx-auto px-4 py-16">
+      <h3 class="text-2xl md:text-3xl font-bold text-rose-800 mb-8 text-center" style="font-family: 'Playfair Display', serif;">What Our Customers Say</h3>
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-rose-100 rounded-full mb-4 flex items-center justify-center text-3xl">👩‍🦰</div>
+          <p class="text-rose-700 italic mb-4">“Absolutely loved the saree! The fabric and color are gorgeous.”</p>
+          <div class="flex items-center justify-center mb-2">
+            <span class="text-rose-400 text-lg">★★★★★</span>
+          </div>
+          <span class="font-semibold text-rose-700">Priya S.</span>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-rose-100 rounded-full mb-4 flex items-center justify-center text-3xl">👩🏽‍💼</div>
+          <p class="text-rose-700 italic mb-4">“Fast delivery and beautiful packaging. Will order again!”</p>
+          <div class="flex items-center justify-center mb-2">
+            <span class="text-rose-400 text-lg">★★★★★</span>
+          </div>
+          <span class="font-semibold text-rose-700">Meera K.</span>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-rose-100 rounded-full mb-4 flex items-center justify-center text-3xl">👩🏻</div>
+          <p class="text-rose-700 italic mb-4">“The collection is so unique and elegant. Highly recommend!”</p>
+          <div class="flex items-center justify-center mb-2">
+            <span class="text-rose-400 text-lg">★★★★★</span>
+          </div>
+          <span class="font-semibold text-rose-700">Anjali D.</span>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials End -->
+    <!-- Footer Start -->
+    <footer class="bg-white border-t border-rose-100 mt-10">
+      <div class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-rose-600">
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Shop</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Categories</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Contact</h4>
+          <p class="text-rose-600">Email: support@Sareeana.com</p>
+          <p class="text-rose-600">Phone: +91 98765 43210</p>
+        </div>
+        <!-- Social Media -->
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Follow Us</h4>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Instagram</span>📸</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Facebook</span>📘</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Twitter</span>🐦</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-rose-400 py-4 text-sm">© 2025 Sareeana. All rights reserved.</div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+      // Show/hide dropdown on click for accessibility (optional, fallback for mobile)
+      document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('userMenuBtn');
+        const dropdown = document.getElementById('userDropdown');
+        if (btn && dropdown) {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdown.classList.toggle('hidden');
+          });
+          document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target) && !btn.contains(e.target)) {
+              dropdown.classList.add('hidden');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

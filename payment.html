@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/src/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment | Sareeana</title>
+  </head>
+  <body class="bg-rose-50 min-h-screen flex flex-col">
+    <!-- Navbar Start (copied from index.html) -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-md">
+      <div class="container mx-auto flex items-center justify-between py-4 px-4">
+        <div class="flex items-center">
+          <span class="text-2xl font-extrabold text-rose-600 tracking-wide">Sareeana</span>
+        </div>
+        <ul class="hidden md:flex space-x-8 mx-auto text-rose-700 font-medium">
+          <li><a href="index.html" class="hover:text-rose-500 transition-colors">Home</a></li>
+          <li><a href="shop.html" class="hover:text-rose-500 transition-colors">Shop</a></li>
+          <li><a href="#" class="hover:text-rose-500 transition-colors">Categories</a></li>
+          <li><a href="about.html" class="hover:text-rose-500 transition-colors">About</a></li>
+          <li><a href="login.html" class="hover:text-rose-500 transition-colors">Login</a></li>
+          <li><a href="signup.html" class="hover:text-rose-500 transition-colors">Sign Up</a></li>
+        </ul>
+        <div class="flex items-center">
+          <button class="relative group" onclick="location.href='cart.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-rose-600 group-hover:text-rose-400 transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.836l.383 1.437m0 0l1.7 6.385a2.25 2.25 0 002.183 1.692h7.063a2.25 2.25 0 002.183-1.692l1.7-6.385m-13.216 0h13.216" />
+              <circle cx="9" cy="20" r="1.25" />
+              <circle cx="17" cy="20" r="1.25" />
+            </svg>
+            <span class="absolute -top-2 -right-2 bg-rose-500 text-white text-xs rounded-full px-1.5 py-0.5">0</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <main class="flex-1 flex items-center justify-center py-16 px-2">
+      <form class="w-full max-w-lg bg-white/90 rounded-2xl shadow-lg p-10 border border-rose-100 space-y-8">
+        <h2 class="text-2xl font-bold text-rose-700 mb-2 text-center" style="font-family: 'Playfair Display', serif;">Payment</h2>
+        <!-- Order Total -->
+        <div class="flex justify-between items-center bg-rose-50 rounded-lg px-4 py-3 border border-rose-100 mb-4">
+          <span class="text-rose-700 font-medium">Total Amount</span>
+          <span class="text-rose-600 font-bold text-lg">₹4,298</span>
+        </div>
+        <!-- Payment Methods -->
+        <div class="space-y-4">
+          <div class="text-rose-700 font-semibold mb-2">Select Payment Method</div>
+          <label class="flex items-center gap-3 p-3 rounded-lg border border-rose-100 bg-white shadow-sm cursor-pointer">
+            <input type="radio" name="payment-method" checked class="accent-rose-500" />
+            <span>Credit/Debit Card</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-lg border border-rose-100 bg-white shadow-sm cursor-pointer">
+            <input type="radio" name="payment-method" class="accent-rose-500" />
+            <span>bKash</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-lg border border-rose-100 bg-white shadow-sm cursor-pointer">
+            <input type="radio" name="payment-method" class="accent-rose-500" />
+            <span>Cash on Delivery</span>
+          </label>
+        </div>
+        <!-- Card Details (Static) -->
+        <div class="space-y-4">
+          <div class="text-rose-700 font-semibold mb-2">Card Details</div>
+          <input type="text" class="w-full px-4 py-3 rounded-lg border border-rose-100 bg-rose-50 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="Card Number" />
+          <div class="flex gap-4">
+            <input type="text" class="w-1/2 px-4 py-3 rounded-lg border border-rose-100 bg-rose-50 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="MM/YY" />
+            <input type="text" class="w-1/2 px-4 py-3 rounded-lg border border-rose-100 bg-rose-50 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="CVV" />
+          </div>
+          <input type="text" class="w-full px-4 py-3 rounded-lg border border-rose-100 bg-rose-50 focus:outline-none focus:ring-2 focus:ring-rose-200" placeholder="Name on Card" />
+        </div>
+        <button type="submit" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-3 rounded-lg shadow transition-colors mt-4" onclick="location.href='order-confirmation.html'; return false;">Confirm Payment</button>
+      </form>
+    </main>
+    <!-- Footer Start (copied from index.html) -->
+    <footer class="bg-white border-t border-rose-100 mt-10">
+      <div class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-rose-600">
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Shop</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Categories</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Contact</h4>
+          <p class="text-rose-600">Email: support@Sareeana.com</p>
+          <p class="text-rose-600">Phone: +91 98765 43210</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Follow Us</h4>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Instagram</span>📸</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Facebook</span>📘</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Twitter</span>🐦</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-rose-400 py-4 text-sm">© 2025 Sareeana. All rights reserved.</div>
+    </footer>
+    <!-- Footer End -->
+  </body>
+</html>

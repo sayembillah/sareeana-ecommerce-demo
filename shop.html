@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/src/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Sareeana</title>
+  </head>
+  <body class="bg-rose-50 font-sans min-h-screen">
+    <!-- Navbar Start (copied from index.html) -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-md">
+      <div class="container mx-auto flex items-center justify-between py-4 px-4">
+        <div class="flex items-center">
+          <span class="text-2xl font-extrabold text-rose-600 tracking-wide">Sareeana</span>
+        </div>
+        <ul class="hidden md:flex space-x-8 mx-auto text-rose-700 font-medium">
+          <li><a href="index.html" class="hover:text-rose-500 transition-colors">Home</a></li>
+          <li><a href="shop.html" class="hover:text-rose-500 transition-colors">Shop</a></li>
+          <li><a href="#" class="hover:text-rose-500 transition-colors">Categories</a></li>
+          <li><a href="about.html" class="hover:text-rose-500 transition-colors">About</a></li>
+          <li><a href="faq.html" class="hover:text-rose-500 transition-colors">FAQ</a></li>
+          <li><a href="login.html" class="hover:text-rose-500 transition-colors">Login</a></li>
+          <li><a href="signup.html" class="hover:text-rose-500 transition-colors">Sign Up</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+          <button class="relative group" onclick="location.href='cart.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-rose-600 group-hover:text-rose-400 transition-colors">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.836l.383 1.437m0 0l1.7 6.385a2.25 2.25 0 002.183 1.692h7.063a2.25 2.25 0 002.183-1.692l1.7-6.385m-13.216 0h13.216" />
+              <circle cx="9" cy="20" r="1.25" />
+              <circle cx="17" cy="20" r="1.25" />
+            </svg>
+            <span class="absolute -top-2 -right-2 bg-rose-500 text-white text-xs rounded-full px-1.5 py-0.5">0</span>
+          </button>
+          <!-- User Dropdown -->
+          <div class="relative group">
+            <button id="userMenuBtn" class="flex items-center justify-center w-10 h-10 rounded-full bg-rose-100 hover:bg-rose-200 focus:outline-none focus:ring-2 focus:ring-rose-300 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-rose-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 19.5a8.25 8.25 0 1115 0v.75a.75.75 0 01-.75.75h-13.5a.75.75 0 01-.75-.75v-.75z" />
+              </svg>
+            </button>
+            <div id="userDropdown" class="hidden group-hover:block absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg py-2 z-50 border border-rose-100">
+              <a href="profile.html" class="block px-5 py-2 text-rose-700 hover:bg-rose-50">Profile</a>
+              <a href="#" class="block px-5 py-2 text-rose-700 hover:bg-rose-50">Settings</a>
+              <a href="order-history.html" class="block px-5 py-2 text-rose-700 hover:bg-rose-50">Order History</a>
+              <a href="#" class="block px-5 py-2 text-rose-500 hover:bg-rose-50 border-t border-rose-100">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <main class="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-10">
+      <!-- Sidebar Filters (Visual Only) -->
+      <aside class="w-full md:w-64 mb-8 md:mb-0">
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+          <h3 class="font-bold text-rose-700 mb-4">Categories</h3>
+          <ul class="space-y-2 text-rose-600">
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Silk Sarees</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Cotton Sarees</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Chiffon Sarees</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Banarasi Sarees</a></li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+          <h3 class="font-bold text-rose-700 mb-4">Colors</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="w-6 h-6 rounded-full bg-rose-300 border-2 border-white shadow"></span>
+            <span class="w-6 h-6 rounded-full bg-pink-200 border-2 border-white shadow"></span>
+            <span class="w-6 h-6 rounded-full bg-yellow-100 border-2 border-white shadow"></span>
+            <span class="w-6 h-6 rounded-full bg-green-100 border-2 border-white shadow"></span>
+            <span class="w-6 h-6 rounded-full bg-blue-100 border-2 border-white shadow"></span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6">
+          <h3 class="font-bold text-rose-700 mb-4">Price</h3>
+          <ul class="space-y-2 text-rose-600">
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Under ₹1,500</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">₹1,500 - ₹2,500</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">₹2,500 - ₹4,000</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Above ₹4,000</a></li>
+          </ul>
+        </div>
+      </aside>
+      <!-- Product Grid -->
+      <section class="flex-1">
+        <h1 class="text-2xl md:text-3xl font-bold text-rose-800 mb-8" style="font-family: 'Playfair Display', serif;">Shop Sarees</h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Product Card 1 -->
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative">
+            <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Add to Wishlist" onclick="location.href='wishlist.html'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Rose Silk Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+            <h4 class="font-semibold text-rose-700 mb-1">Rose Silk Saree</h4>
+            <p class="text-rose-500 text-sm mb-2">Soft silk with floral motifs, perfect for festive occasions.</p>
+            <span class="text-rose-600 font-bold mb-3">₹2,499</span>
+            <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='product.html'">View Details</button>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative">
+            <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Add to Wishlist" onclick="location.href='wishlist.html'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Pastel Cotton Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+            <h4 class="font-semibold text-rose-700 mb-1">Pastel Cotton Saree</h4>
+            <p class="text-rose-500 text-sm mb-2">Lightweight, breathable, and ideal for summer days.</p>
+            <span class="text-rose-600 font-bold mb-3">₹1,799</span>
+            <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='product.html'">View Details</button>
+          </div>
+          <!-- Product Card 3 -->
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative">
+            <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Add to Wishlist" onclick="location.href='wishlist.html'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Elegant Chiffon Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+            <h4 class="font-semibold text-rose-700 mb-1">Elegant Chiffon Saree</h4>
+            <p class="text-rose-500 text-sm mb-2">Sheer, flowy chiffon for a graceful, modern look.</p>
+            <span class="text-rose-600 font-bold mb-3">₹2,199</span>
+            <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='product.html'">View Details</button>
+          </div>
+          <!-- Product Card 4 -->
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative">
+            <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Add to Wishlist" onclick="location.href='wishlist.html'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Classic Banarasi Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+            <h4 class="font-semibold text-rose-700 mb-1">Classic Banarasi Saree</h4>
+            <p class="text-rose-500 text-sm mb-2">Traditional Banarasi weave with rich zari work.</p>
+            <span class="text-rose-600 font-bold mb-3">₹3,499</span>
+            <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='product.html'">View Details</button>
+          </div>
+          <!-- Product Card 5 -->
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative">
+            <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Add to Wishlist" onclick="location.href='wishlist.html'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Peach Georgette Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+            <h4 class="font-semibold text-rose-700 mb-1">Peach Georgette Saree</h4>
+            <p class="text-rose-500 text-sm mb-2">Soft georgette with subtle shimmer, easy drape.</p>
+            <span class="text-rose-600 font-bold mb-3">₹1,999</span>
+            <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='product.html'">View Details</button>
+          </div>
+          <!-- Product Card 6 -->
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative">
+            <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Add to Wishlist" onclick="location.href='wishlist.html'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" alt="Mint Linen Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+            <h4 class="font-semibold text-rose-700 mb-1">Mint Linen Saree</h4>
+            <p class="text-rose-500 text-sm mb-2">Cool linen in pastel mint, perfect for daywear.</p>
+            <span class="text-rose-600 font-bold mb-3">₹1,599</span>
+            <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='product.html'">View Details</button>
+          </div>
+          <!-- Product Card 7 -->
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative">
+            <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Add to Wishlist" onclick="location.href='wishlist.html'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Ivory Organza Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+            <h4 class="font-semibold text-rose-700 mb-1">Ivory Organza Saree</h4>
+            <p class="text-rose-500 text-sm mb-2">Delicate organza with floral embroidery.</p>
+            <span class="text-rose-600 font-bold mb-3">₹2,899</span>
+            <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='product.html'">View Details</button>
+          </div>
+          <!-- Product Card 8 -->
+          <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow p-4 flex flex-col relative">
+            <button class="absolute top-3 right-3 text-rose-400 hover:text-rose-600" aria-label="Add to Wishlist" onclick="location.href='wishlist.html'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Lavender Net Saree" class="w-full h-40 object-cover rounded-lg mb-3" />
+            <h4 class="font-semibold text-rose-700 mb-1">Lavender Net Saree</h4>
+            <p class="text-rose-500 text-sm mb-2">Light net saree with sequin highlights.</p>
+            <span class="text-rose-600 font-bold mb-3">₹2,299</span>
+            <button class="mt-auto bg-rose-500 hover:bg-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-colors" onclick="location.href='product.html'">View Details</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Start (copied from index.html) -->
+    <footer class="bg-white border-t border-rose-100 mt-10">
+      <div class="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-rose-600">
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Shop</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Categories</a></li>
+            <li><a href="#" class="hover:text-rose-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Contact</h4>
+          <p class="text-rose-600">Email: support@Sareeana.com</p>
+          <p class="text-rose-600">Phone: +91 98765 43210</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-rose-700 mb-4">Follow Us</h4>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Instagram</span>📸</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Facebook</span>📘</a>
+            <a href="#" class="text-rose-500 hover:text-rose-400 transition-colors text-2xl"><span class="sr-only">Twitter</span>🐦</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-rose-400 py-4 text-sm">© 2025 Sareeana. All rights reserved.</div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+      // Show/hide dropdown on click for accessibility (optional, fallback for mobile)
+      document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.getElementById('userMenuBtn');
+        const dropdown = document.getElementById('userDropdown');
+        if (btn && dropdown) {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdown.classList.toggle('hidden');
+          });
+          document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target) && !btn.contains(e.target)) {
+              dropdown.classList.add('hidden');
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
