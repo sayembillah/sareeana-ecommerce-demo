@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Messages | Sareeana Admin</title>
+    <link href="/src/style.css" rel="stylesheet">
+  </head>
+  <body class="bg-rose-50 font-sans min-h-screen">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="hidden md:flex flex-col w-64 bg-white border-r border-rose-100 shadow-lg fixed inset-y-0 left-0 z-30">
+        <div class="h-20 flex items-center justify-center border-b border-rose-100">
+          <span class="text-2xl font-extrabold text-rose-600 tracking-wide">Sareeana Admin</span>
+        </div>
+        <nav class="flex-1 py-8 px-4 space-y-2">
+          <a href="admin-dashboard.html" class="flex items-center px-4 py-3 rounded-lg text-rose-700 gap-3 hover:bg-rose-100 transition-colors">Dashboard</a>
+          <a href="admin-products.html" class="flex items-center px-4 py-3 rounded-lg text-rose-700 gap-3 hover:bg-rose-100 transition-colors">Products</a>
+          <a href="admin-orders.html" class="flex items-center px-4 py-3 rounded-lg text-rose-700 gap-3 hover:bg-rose-100 transition-colors">Orders</a>
+          <a href="admin-users.html" class="flex items-center px-4 py-3 rounded-lg text-rose-700 gap-3 hover:bg-rose-100 transition-colors">Users</a>
+          <a href="admin-messages.html" class="flex items-center px-4 py-3 rounded-lg text-rose-700 bg-rose-50 font-semibold gap-3 hover:bg-rose-100 transition-colors">Messages</a>
+          <a href="#" class="flex items-center px-4 py-3 rounded-lg text-rose-500 gap-3 hover:bg-rose-100 transition-colors">Logout</a>
+        </nav>
+      </aside>
+      <!-- Main Content -->
+      <div class="flex-1 flex flex-col md:ml-64 min-h-screen">
+        <!-- Top Navbar -->
+        <header class="sticky top-0 z-20 bg-white/90 backdrop-blur border-b border-rose-100 shadow flex items-center h-20 px-6">
+          <h1 class="text-2xl font-bold text-rose-700 tracking-wide">Customer Messages</h1>
+        </header>
+        <!-- Content -->
+        <main class="flex-1 p-6 md:p-10 bg-rose-50">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+            <div></div>
+            <div>
+              <select class="px-4 py-2 rounded-lg border border-rose-100 bg-white focus:outline-none focus:ring-2 focus:ring-rose-200 text-sm">
+                <option>All</option>
+                <option>Order</option>
+                <option>Product</option>
+                <option>Complaint</option>
+              </select>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="bg-white rounded-lg shadow p-4">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                <div class="text-lg font-semibold text-rose-700">Tamanna Rahman</div>
+                <div class="text-sm text-gray-500">April 30, 2025</div>
+              </div>
+              <div class="mb-1 text-sm text-gray-500">tamanna@gmail.com</div>
+              <div class="mb-2">
+                <span class="text-sm text-gray-500">Subject:</span>
+                <span class="font-medium text-gray-700">Order Issue</span>
+              </div>
+              <div class="text-gray-700 whitespace-pre-line mb-4">Hello, I received my order but one of the sarees is missing. Please help me resolve this issue as soon as possible. Thank you!</div>
+              <div class="flex gap-2 justify-end mt-2">
+                <button title="Reply" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h7V6a1 1 0 011-1h7a1 1 0 011 1v12a1 1 0 01-1 1h-7a1 1 0 01-1-1v-4H3m0 0l4-4m-4 4l4 4"/></svg>
+                </button>
+                <button title="Delete" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 hover:text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                <div class="text-lg font-semibold text-rose-700">Saanvi Patel</div>
+                <div class="text-sm text-gray-500">April 28, 2025</div>
+              </div>
+              <div class="mb-1 text-sm text-gray-500">saanvi.patel@gmail.com</div>
+              <div class="mb-2">
+                <span class="text-sm text-gray-500">Subject:</span>
+                <span class="font-medium text-gray-700">Product Inquiry</span>
+              </div>
+              <div class="text-gray-700 whitespace-pre-line mb-4">Hi, can you tell me if the Rose Silk Saree is available in blue color? Also, what is the delivery time to Mumbai?</div>
+              <div class="flex gap-2 justify-end mt-2">
+                <button title="Reply" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h7V6a1 1 0 011-1h7a1 1 0 011 1v12a1 1 0 01-1 1h-7a1 1 0 01-1-1v-4H3m0 0l4-4m-4 4l4 4"/></svg>
+                </button>
+                <button title="Delete" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 hover:text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                <div class="text-lg font-semibold text-rose-700">Amitabh Roy</div>
+                <div class="text-sm text-gray-500">April 25, 2025</div>
+              </div>
+              <div class="mb-1 text-sm text-gray-500">amitabh.roy@gmail.com</div>
+              <div class="mb-2">
+                <span class="text-sm text-gray-500">Subject:</span>
+                <span class="font-medium text-gray-700">Complaint</span>
+              </div>
+              <div class="text-gray-700 whitespace-pre-line mb-4">I received a damaged saree in my last order. Please arrange for a replacement or refund.</div>
+              <div class="flex gap-2 justify-end mt-2">
+                <button title="Reply" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h7V6a1 1 0 011-1h7a1 1 0 011 1v12a1 1 0 01-1 1h-7a1 1 0 01-1-1v-4H3m0 0l4-4m-4 4l4 4"/></svg>
+                </button>
+                <button title="Delete" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 hover:text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                <div class="text-lg font-semibold text-rose-700">Meera Kaur</div>
+                <div class="text-sm text-gray-500">April 22, 2025</div>
+              </div>
+              <div class="mb-1 text-sm text-gray-500">meera.k@example.com</div>
+              <div class="mb-2">
+                <span class="text-sm text-gray-500">Subject:</span>
+                <span class="font-medium text-gray-700">Order</span>
+              </div>
+              <div class="text-gray-700 whitespace-pre-line mb-4">Can I change the delivery address for my recent order #ORD12345?</div>
+              <div class="flex gap-2 justify-end mt-2">
+                <button title="Reply" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h7V6a1 1 0 011-1h7a1 1 0 011 1v12a1 1 0 01-1 1h-7a1 1 0 01-1-1v-4H3m0 0l4-4m-4 4l4 4"/></svg>
+                </button>
+                <button title="Delete" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 hover:text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                <div class="text-lg font-semibold text-rose-700">Anjali D.</div>
+                <div class="text-sm text-gray-500">April 20, 2025</div>
+              </div>
+              <div class="mb-1 text-sm text-gray-500">anjali.d@outlook.com</div>
+              <div class="mb-2">
+                <span class="text-sm text-gray-500">Subject:</span>
+                <span class="font-medium text-gray-700">Product Inquiry</span>
+              </div>
+              <div class="text-gray-700 whitespace-pre-line mb-4">Is there a discount if I buy more than 3 sarees? Please let me know the best offer.</div>
+              <div class="flex gap-2 justify-end mt-2">
+                <button title="Reply" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h7V6a1 1 0 011-1h7a1 1 0 011 1v12a1 1 0 01-1 1h-7a1 1 0 01-1-1v-4H3m0 0l4-4m-4 4l4 4"/></svg>
+                </button>
+                <button title="Delete" class="p-2 rounded hover:bg-rose-50 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 hover:text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
